@@ -1,9 +1,10 @@
+
 view: verizon {
 
       derived_table: {
 
       sql:
-      SET @@query_label = "label_key:label_value";
+
       select * from cg-acis-ind-sandbox.test_sql.department ;;
     }
 
