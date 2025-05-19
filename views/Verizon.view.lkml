@@ -1,8 +1,7 @@
 view: verizon {
 
       derived_table: {
-      sql: set @@query_label="s_finance:s_dev";
-        select * from cg-acis-ind-sandbox.test_sql.department ;;
+      sql:  select * from cg-acis-ind-sandbox.test_sql.department ;;
     }
 
     measure: count {
