@@ -5,7 +5,7 @@ view: verizon {
 
       sql:
 
-      select * from cg-acis-ind-sandbox.test_sql.department ;;
+      select * from cg-acis-ind-sandbox.test_sql.employee ;;
     }
 
     measure: count {
