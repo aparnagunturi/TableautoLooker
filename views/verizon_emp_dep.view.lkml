@@ -7,8 +7,6 @@ view: verizon_emp_dep {
   }
 
 
-
-
   dimension: emp_name {
     type: string
     sql: ${TABLE}.emp_name ;;
@@ -16,11 +14,13 @@ view: verizon_emp_dep {
 
   dimension: emp_id {
     type: number
+    primary_key: yes
     sql: ${TABLE}.emp_id ;;
   }
 
   dimension: dep_id {
     type: number
+
     sql: ${TABLE}.dep_id ;;
   }
 
