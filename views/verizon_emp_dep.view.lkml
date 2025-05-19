@@ -1,7 +1,7 @@
 
 view: verizon_emp_dep {
   derived_table: {
-    sql: select * from test_sql.employee as emp
+    sql: select emp.emp_id,emp.emp_name,emp.dep_id,dept.dep_name from test_sql.employee as emp
       left join test_sql.department as dept
       on emp.dep_id=dept.dep_id ;;
   }
