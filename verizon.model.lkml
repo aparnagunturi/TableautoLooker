@@ -6,3 +6,5 @@ explore: verizon {
 
 }
 explore: verizon_emp_dep {}
+explore: sales {}
+explore: orders {}
