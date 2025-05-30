@@ -13,10 +13,7 @@ view: sales {
     type: number
     sql: ${TABLE}.PricePerUnit ;;
   }
-  dimension: quantity {
-    type: number
-    sql: ${TABLE}.Quantity ;;
-  }
+
   dimension: total_price {
     type: number
     sql: ${TABLE}.TotalPrice ;;
@@ -24,5 +21,9 @@ view: sales {
   measure: count {
     type: count
     drill_fields: [customer_name]
+  }
+  measure: Quantity {
+    type: sum
+    sql: ${TABLE}.quantity ;;
   }
 }
