@@ -6,5 +6,9 @@ explore: verizon {
 
 }
 explore: verizon_emp_dep {}
-explore: sales {}
-explore: orders {}
+explore: sales {
+  join: orders {
+    sql_on: ${sales.order_id} = ${orders.order_id} ;;
+    relationship: many_to_one
+  }
+}
