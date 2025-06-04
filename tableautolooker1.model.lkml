@@ -1,4 +1,5 @@
 connection: "bigquery_verizon"
 
-include: "/views/*.view.lkml"                # include all views in the views/ folder in this project
+include: "/views/*.view.lkml"
+
 explore: employee {}
