@@ -4,16 +4,13 @@ view: employee {
 
   dimension: employee_id {
     label: "Employee ID"
-    primary_key: yes
     type: number
     sql: ${TABLE}.EmployeeID ;;
   }
-  dimension_group: birth {
-    type: time
+  dimension: birth {
+    type: date
     label: "Birth Date"
-    timeframes: [raw, date, week, month, quarter, year]
-    convert_tz: no
-    datatype: date
+    datatype: datetime
     sql: ${TABLE}.BirthDate ;;
   }
   dimension: first_name {
@@ -21,11 +18,10 @@ view: employee {
     type: string
     sql: ${TABLE}.FirstName ;;
   }
-  dimension_group: hire {
-    type: time
-    timeframes: [raw, date, week, month, quarter, year]
-    convert_tz: no
-    datatype: date
+  dimension: hire {
+    label: "Hire Date"
+    type: date
+    datatype: datetime
     sql: ${TABLE}.HireDate ;;
   }
   dimension: last_name {
@@ -34,11 +30,9 @@ view: employee {
     sql: ${TABLE}.LastName ;;
   }
   dimension: position {
+    label: "Position"
     type: string
     sql: ${TABLE}.Position ;;
   }
-  measure: count {
-    type: count
-    drill_fields: [employee_id, first_name, last_name, employee_hike.count]
-  }
+
 }

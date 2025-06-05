@@ -1,7 +1,7 @@
 connection: "bigquery_verizon"
 
 include: "/views/*.view.lkml"
-
+include: "/dashboards/*.dashboard"
 
 explore: employee {
   join: employee_hike {

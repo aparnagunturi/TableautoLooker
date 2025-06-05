@@ -2,33 +2,36 @@ view: employee_hike {
   sql_table_name: `cg-acis-ind-sandbox.emp.employee_hike` ;;
 
   dimension: employee_id {
+    label: "EmployeeID (employee hike)"
     type: number
     sql: ${TABLE}.EmployeeID ;;
   }
-  dimension_group: hike {
-    type: time
-    timeframes: [raw, date, week, month, quarter, year]
-    convert_tz: no
-    datatype: date
+  dimension: hike {
+    label: "Hike Date"
+    type: date
+    datatype: datetime
     sql: ${TABLE}.HikeDate ;;
   }
   dimension: hike_id {
+    label: "Hike ID"
     type: number
     sql: ${TABLE}.HikeID ;;
   }
-  dimension: new_salary {
-    type: number
+  measure: new_salary {
+    label: "New Salary"
+    type: sum
     sql: ${TABLE}.NewSalary ;;
   }
-  dimension: percentage_increase {
-    type: number
+  measure: percentage_increase {
+    label: "Percentage Increase"
+    type: sum
     sql: ${TABLE}.PercentageIncrease ;;
+    value_format_name: "decimal_2"
   }
-  dimension: previous_salary {
-    type: number
+  measure: previous_salary {
+    label: "Previous Salary"
+    type: sum
     sql: ${TABLE}.PreviousSalary ;;
   }
-  measure: count {
-    type: count
-  }
+
 }
