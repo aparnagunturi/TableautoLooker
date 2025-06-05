@@ -9,7 +9,6 @@ view: employee_hike {
   dimension: hike {
     label: "Hike Date"
     type: date
-    datatype: datetime
     sql: ${TABLE}.HikeDate ;;
   }
   dimension: hike_id {

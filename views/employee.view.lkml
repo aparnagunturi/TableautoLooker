@@ -1,6 +1,5 @@
 view: employee {
   sql_table_name: `cg-acis-ind-sandbox.emp.employee` ;;
-  drill_fields: [employee_id]
 
   dimension: employee_id {
     label: "Employee ID"
@@ -10,7 +9,6 @@ view: employee {
   dimension: birth {
     type: date
     label: "Birth Date"
-    datatype: datetime
     sql: ${TABLE}.BirthDate ;;
   }
   dimension: first_name {
@@ -21,7 +19,6 @@ view: employee {
   dimension: hire {
     label: "Hire Date"
     type: date
-    datatype: datetime
     sql: ${TABLE}.HireDate ;;
   }
   dimension: last_name {
